@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel Data Visualization</title>
+    <style>
+        .imgs {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: blue;">Excel Data Visualization</h1>
+
+    <h2 style="text-align: center; color: green">1. Total Sales by Category (Bar Chart)</h2>
+    <img class="imgs" src="{{ url_for('static', filename='bar_chart.png') }}" alt="Bar Chart" width="600">
+
+    <h2 style="text-align: center; color: green;">2. Monthly Sales Trend (Line Graph)</h2>
+    <img class="imgs" src="{{ url_for('static', filename='line_graph.png') }}" alt="Line Graph" width="600">
+
+    <h2 style="text-align: center; color: green;">3. Sales vs Profit (Scatter Plot)</h2>
+    <img class="imgs" src="{{ url_for('static', filename='scatter_plot.png') }}" alt="Scatter Plot" width="600">
+</body>
+</html>
