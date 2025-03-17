@@ -62,6 +62,14 @@ plt.ylabel('Profit')
 plt.savefig("static/scatter_plot.png")
 plt.close()
 
+grouped = df.groupby('Month')['Sales'].sum()
+
+plt.figure(figsize=(8, 6))
+plt.pie(grouped, labels=grouped.index, autopct='%1.1f%%', colors=plt.cm.Set3(range(len(grouped))))
+plt.title('Sales Distribution by Month')
+plt.savefig("static/pie_chart.png")
+plt.close()
+
 
 @main.route('/')
 def index():
