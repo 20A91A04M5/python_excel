@@ -211,6 +211,12 @@ app.layout = html.Div([
 # -------------------------------
 # Step 5: Run Server on Render-Compatible Port
 # -------------------------------
+# if __name__ == '__main__':
+#     port = int(os.environ.get("PORT", 5000))  # Ensure port binding on Render
+#     app.run(debug=True,  port=port)
+
+import os
+
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Ensure port binding on Render
+    port = int(os.environ.get("PORT", 5000))  # Use the PORT env variable if available, default to 5000
     app.run(debug=True,  port=port)
